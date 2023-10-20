@@ -98,28 +98,42 @@ main {
   display: grid;
   gap: 1rem;
 }
-.form .form__container form input {
+.form .form__container form .inputBox {
+  position: relative;
+}
+.form .form__container form .inputBox input {
   font-weight: 600;
   color: hsl(249, 10%, 26%);
   padding: 1em;
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 5px;
-  overflow: hidden;
+  width: 100%;
 }
-.form .form__container form input:focus {
+.form .form__container form .inputBox input:focus {
   border: 1px solid hsl(249, 10%, 26%);
 }
-.form .form__container form .error-msg {
+.form .form__container form .inputBox input::before {
+  content: "";
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(../images/icon-error.svg);
+}
+.form .form__container form .inputBox .error-msg {
   display: none;
   font-size: 0.625rem;
   font-style: italic;
-  color: .form .form__container form .error-msg red;
+  text-align: right;
+  color: hsl(0, 100%, 74%);
+  margin-top: 0.5em;
 }
-.form .form__container form .success {
+.form .form__container form .inputBox .success {
   border-color: rgba(56, 222, 68, 0.7803921569);
 }
-.form .form__container form .error {
-  border-color: hsl(0, 100%, 74%);
+.form .form__container form .inputBox .error {
+  border-color: #ff4747;
 }
 .form .form__container form .btn {
   font-size: 1rem;
@@ -135,13 +149,13 @@ main {
 .form .form__container form .btn:hover {
   opacity: 0.6;
 }
-.form .form__container .form__footer {
+.form .form__container form .form__footer {
   font-size: 0.625rem;
   font-weight: 500;
   color: hsl(246, 25%, 77%);
-  margin: 1em;
+  margin: 0 1em 1em;
 }
-.form .form__container .form__footer a {
+.form .form__container form .form__footer a {
   font-weight: 700;
   color: hsl(0, 100%, 74%);
 }
