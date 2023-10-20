@@ -1,0 +1,29 @@
+body {
+    background-image: url(../images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $red;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+    width: 90%;
+    max-width: 1000px;
+    margin: 4rem auto;
+    color: #fff;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-image: url(../images/bg-intro-desktop.png);
+    }
+    
+    main {        
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        margin: 8rem;
+    }       
+}

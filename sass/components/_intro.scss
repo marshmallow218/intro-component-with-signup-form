@@ -1,0 +1,24 @@
+.intro {  
+  
+    .intro__title {
+        font-size: $fs-big;
+        font-weight: $fw-semi-bold;
+        line-height: 1.2; 
+        margin-bottom: 1em;  
+    }
+
+    .intro__subtitle {
+        font-weight: $fw-medium;
+    }
+}
+
+@media (min-width: 1200px) {       
+    .intro {
+        text-align: left;            
+        
+        .intro__title {  
+            font-size: 2.5rem;          
+            font-weight: $fw-bold;
+        }
+    }    
+}
