@@ -5,12 +5,6 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    
-    validateInputs();
-});
-
 const setError = (element, message) => {
     const inputBox = element.parentElement;
     const errorDisplay = inputBox.querySelector('.error-msg');
@@ -26,7 +20,7 @@ const setSuccess = element => {
     const errorDisplay = inputBox.querySelector('.error-msg');
 
     errorDisplay.style.display = 'none';
-        element.classList.add('success');
+    element.classList.add('success');
     element.classList.remove('error');
 };
 
@@ -61,4 +55,10 @@ const validateInputs = () => {
     } else {
         setSuccess(password);
     }
+    
+    e.preventDefault();
 };
+
+
+form.addEventListener('submit', validateInputs);                
+    
