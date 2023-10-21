@@ -8,7 +8,9 @@ const password = document.querySelector('#password');
 const setError = (element, message) => {
     const inputBox = element.parentElement;
     const errorDisplay = inputBox.querySelector('.error-msg');
-   
+    const errorIcon = inputBox.querySelector('img');
+
+    errorIcon.style.display = 'block';   
     errorDisplay.style.display = 'block';
     errorDisplay.innerText = message;
     element.classList.add('error');
@@ -18,7 +20,9 @@ const setError = (element, message) => {
 const setSuccess = element => {
     const inputBox = element.parentElement;
     const errorDisplay = inputBox.querySelector('.error-msg');
+    const errorIcon = inputBox.querySelector('img');
 
+    errorIcon.style.display = 'none';
     errorDisplay.style.display = 'none';
     element.classList.add('success');
     element.classList.remove('error');
@@ -55,10 +59,12 @@ const validateInputs = () => {
     } else {
         setSuccess(password);
     }
-    
-    e.preventDefault();
 };
 
 
-form.addEventListener('submit', validateInputs);                
+form.addEventListener('submit', e => {                
+    e.preventDefault();
+    
+    validateInputs();                                                              
+});                
     

@@ -112,15 +112,6 @@ main {
 .form .form__container form .inputBox input:focus {
   border: 1px solid hsl(249, 10%, 26%);
 }
-.form .form__container form .inputBox input::before {
-  content: "";
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-image: url(../images/icon-error.svg);
-}
 .form .form__container form .inputBox .error-msg {
   display: none;
   font-size: 0.625rem;
@@ -128,6 +119,12 @@ main {
   text-align: right;
   color: hsl(0, 100%, 74%);
   margin-top: 0.5em;
+}
+.form .form__container form .inputBox img {
+  display: none;
+  position: absolute;
+  top: 11px;
+  right: 20px;
 }
 .form .form__container form .inputBox .success {
   border-color: rgba(56, 222, 68, 0.7803921569);
