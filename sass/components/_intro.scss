@@ -1,4 +1,5 @@
-.intro {  
+.intro {
+    max-width: 430px;  
   
     .intro__title {
         font-size: $fs-big;
@@ -12,7 +13,7 @@
     }
 }
 
-@media (min-width: 1200px) {       
+@media (min-width: 1000px) {       
     .intro {
         text-align: left;            
         

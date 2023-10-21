@@ -3,6 +3,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $red;
+    display: grid;
+    place-items: center;
 }
 
 main {
@@ -16,14 +18,13 @@ main {
     text-align: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     body {
         background-image: url(../images/bg-intro-desktop.png);
     }
     
     main {        
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        margin: 8rem;
+        display: flex;
+        justify-content: space-between;
     }       
 }

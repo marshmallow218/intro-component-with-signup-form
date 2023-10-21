@@ -33,6 +33,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: hsl(0, 100%, 74%);
+  display: grid;
+  place-items: center;
 }
 
 main {
@@ -46,15 +48,17 @@ main {
   text-align: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   body {
     background-image: url(../images/bg-intro-desktop.png);
   }
   main {
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    margin: 8rem;
+    display: flex;
+    justify-content: space-between;
   }
+}
+.intro {
+  max-width: 430px;
 }
 .intro .intro__title {
   font-size: 1.6rem;
@@ -66,7 +70,7 @@ main {
   font-weight: 500;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .intro {
     text-align: left;
   }
