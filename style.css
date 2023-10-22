@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus, button:focus, a:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  background-image: url(../images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 4rem auto;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.intro {
+  max-width: 430px;
+}
+.intro .intro__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+.intro .intro__subtitle {
+  font-weight: 500;
+}
+
+@media (min-width: 1000px) {
+  .intro {
+    text-align: left;
+  }
+  .intro .intro__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+.form .form__tag {
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  background-color: hsl(248, 32%, 49%);
+  box-shadow: 0 0.5em hsla(0, 0%, 0%, 0.15);
+}
+.form .form__tag span {
+  font-weight: 600;
+}
+.form .form__container {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0.5em hsla(0, 0%, 0%, 0.25);
+}
+.form .form__container form {
+  display: grid;
+  gap: 1rem;
+}
+.form .form__container form .inputBox {
+  position: relative;
+}
+.form .form__container form .inputBox input {
+  font-weight: 600;
+  color: hsl(249, 10%, 26%);
+  padding: 1em;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  width: 100%;
+}
+.form .form__container form .inputBox input:focus {
+  border: 1px solid hsl(249, 10%, 26%);
+}
+.form .form__container form .inputBox .error-msg {
+  display: none;
+  font-size: 0.625rem;
+  font-style: italic;
+  text-align: right;
+  color: hsl(0, 100%, 74%);
+  margin-top: 0.5em;
+}
+.form .form__container form .inputBox img {
+  display: none;
+  position: absolute;
+  top: 11px;
+  right: 20px;
+}
+.form .form__container form .inputBox .success {
+  border-color: rgba(56, 222, 68, 0.7803921569);
+}
+.form .form__container form .inputBox .error {
+  border-color: #ff4747;
+}
+.form .form__container form .btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 1em 2em;
+  border-radius: 5px;
+  border-bottom: 4px solid hsla(0, 0%, 0%, 0.1);
+  text-transform: uppercase;
+  background-color: hsl(154, 59%, 51%);
+  transition: 0.3s;
+}
+.form .form__container form .btn:hover {
+  opacity: 0.6;
+}
+.form .form__container form .form__footer {
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: hsl(246, 25%, 77%);
+  margin: 0 1em 1em;
+}
+.form .form__container form .form__footer a {
+  font-weight: 700;
+  color: hsl(0, 100%, 74%);
+}
+
+/*# sourceMappingURL=style.css.map */
